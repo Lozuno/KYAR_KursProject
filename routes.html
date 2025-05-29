@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Маршруты - SpeedWagon.by</title>
+		<link rel="stylesheet" href="css/routes.css" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link
+			rel="preconnect"
+			href="https://fonts.gstatic.com"
+			crossorigin=""
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;display=swap"
+			rel="stylesheet"
+		/>
+		<script src="js/main.js" defer></script>
+		<script src="js/routes.js" defer></script>
+		<script src="js/map_modal.js" defer></script>
+	</head>
+	<body>
+		<div class="loading-screen hidden">
+			<div class="loader">
+				<div class="track"></div>
+			</div>
+			<p>SpeedWagon<span>.by</span></p>
+		</div>
+
+		<header class="glass-nav">
+			<div class="container">
+				<div class="logo">
+					<h1>SpeedWagon<span>.by</span></h1>
+				</div>
+				<nav>
+					<ul class="menu">
+						<li><a href="index.html">Главная</a></li>
+						<li>
+							<a href="routes.html" class="active">Маршруты</a>
+						</li>
+						<li><a href="tickets.html">Билеты</a></li>
+						<li><a href="contact.html">Контакты</a></li>
+					</ul>
+					<div class="mobile-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="hero-bg">
+					<div class="track-lines"></div>
+				</div>
+				<div class="container">
+					<div class="hero-content" style="padding-bottom: 20px">
+						<h2 class="gradient-text">Маршруты поездов</h2>
+						<p>Все направления SpeedWagon в пределах Беларуси</p>
+					</div>
+				</div>
+				<div class="shape-divider">
+					<svg
+						data-name="Layer 1"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 1200 120"
+						preserveAspectRatio="none"
+					>
+						<path
+							d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+						></path>
+					</svg>
+				</div>
+			</section>
+
+			<section class="all-routes">
+				<div class="container">
+					<h2 class="section-title">Все маршруты</h2>
+					<div class="search-container">
+						<input
+							type="text"
+							id="route-search"
+							placeholder="Поиск по названию маршрута..."
+						/>
+					</div>
+					<div class="filter-form">
+						<div class="filter-group">
+							<label for="departure">Откуда</label>
+							<select id="departure">
+								<option value="">Выберите город</option>
+								<option value="minsk">Минск</option>
+								<option value="brest">Брест</option>
+								<option value="gomel">Гомель</option>
+								<option value="grodno">Гродно</option>
+								<option value="mogilev">Могилев</option>
+								<option value="vitebsk">Витебск</option>
+							</select>
+						</div>
+						<div class="filter-group">
+							<label for="arrival">Куда</label>
+							<select id="arrival">
+								<option value="">Выберите город</option>
+								<option value="minsk">Минск</option>
+								<option value="brest">Брест</option>
+								<option value="gomel">Гомель</option>
+								<option value="grodno">Гродно</option>
+								<option value="mogilev">Могилев</option>
+								<option value="vitebsk">Витебск</option>
+							</select>
+						</div>
+						<button class="filter-button pulse-effect">
+							Найти маршруты
+						</button>
+					</div>
+					<div class="routes-list">
+						<div
+							class="route-card"
+							style="
+								opacity: 1;
+								transform: translateY(0);
+								transition: opacity 0.5s, transform 0.5s;
+							"
+						>
+							<div class="route-image">
+								<div class="route-initials">М-Б</div>
+								<div class="route-decorative-line"></div>
+								<div class="route-overlay"></div>
+							</div>
+							<div class="route-info">
+								<div class="route-cities">
+									<h3>Минск - Брест</h3>
+									<div class="route-details-badge">
+										<span>3ч 40мин</span>
+										<span class="route-dash"></span>
+										<span>348 км</span>
+									</div>
+								</div>
+								<div class="route-price-group">
+									<p class="route-price">
+										от <span>15.70</span> BYN
+									</p>
+									<a
+										href="tickets.html"
+										class="route-button pulse-effect"
+										>Выбрать</a
+									>
+								</div>
+							</div>
+							<div class="route-bookmark"></div>
+						</div>
+
+						<div
+							class="route-card"
+							style="
+								opacity: 1;
+								transform: translateY(0);
+								transition: opacity 0.5s, transform 0.5s;
+							"
+						>
+							<div class="route-image">
+								<div class="route-initials">М-Г</div>
+								<div class="route-decorative-line"></div>
+								<div class="route-overlay"></div>
+							</div>
+							<div class="route-info">
+								<div class="route-cities">
+									<h3>Минск - Гомель</h3>
+									<div class="route-details-badge">
+										<span>2ч 55мин</span>
+										<span class="route-dash"></span>
+										<span>302 км</span>
+									</div>
+								</div>
+								<div class="route-price-group">
+									<p class="route-price">
+										от <span>13.50</span> BYN
+									</p>
+									<a
+										href="tickets.html"
+										class="route-button pulse-effect"
+										>Выбрать</a
+									>
+								</div>
+							</div>
+							<div class="route-bookmark"></div>
+						</div>
+
+						<div
+							class="route-card"
+							style="
+								opacity: 1;
+								transform: translateY(0);
+								transition: opacity 0.5s, transform 0.5s;
+							"
+						>
+							<div class="route-image">
+								<div class="route-initials">М-Г</div>
+								<div class="route-decorative-line"></div>
+								<div class="route-overlay"></div>
+							</div>
+							<div class="route-info">
+								<div class="route-cities">
+									<h3>Минск - Гродно</h3>
+									<div class="route-details-badge">
+										<span>4ч 05мин</span>
+										<span class="route-dash"></span>
+										<span>275 км</span>
+									</div>
+								</div>
+								<div class="route-price-group">
+									<p class="route-price">
+										от <span>14.80</span> BYN
+									</p>
+									<a
+										href="tickets.html"
+										class="route-button pulse-effect"
+										>Выбрать</a
+									>
+								</div>
+							</div>
+							<div class="route-bookmark"></div>
+						</div>
+
+						<div
+							class="route-card"
+							style="
+								opacity: 1;
+								transform: translateY(0);
+								transition: opacity 0.5s, transform 0.5s;
+							"
+						>
+							<div class="route-image">
+								<div class="route-initials">М-В</div>
+								<div class="route-decorative-line"></div>
+								<div class="route-overlay"></div>
+							</div>
+							<div class="route-info">
+								<div class="route-cities">
+									<h3>Минск - Витебск</h3>
+									<div class="route-details-badge">
+										<span>3ч 10мин</span>
+										<span class="route-dash"></span>
+										<span>290 км</span>
+									</div>
+								</div>
+								<div class="route-price-group">
+									<p class="route-price">
+										от <span>12.90</span> BYN
+									</p>
+									<a
+										href="tickets.html"
+										class="route-button pulse-effect"
+										>Выбрать</a
+									>
+								</div>
+							</div>
+							<div class="route-bookmark"></div>
+						</div>
+
+						<div
+							class="route-card"
+							style="
+								opacity: 1;
+								transform: translateY(0);
+								transition: opacity 0.5s, transform 0.5s;
+							"
+						>
+							<div class="route-image">
+								<div class="route-initials">М-М</div>
+								<div class="route-decorative-line"></div>
+								<div class="route-overlay"></div>
+							</div>
+							<div class="route-info">
+								<div class="route-cities">
+									<h3>Минск - Могилев</h3>
+									<div class="route-details-badge">
+										<span>2ч 30мин</span>
+										<span class="route-dash"></span>
+										<span>199 км</span>
+									</div>
+								</div>
+								<div class="route-price-group">
+									<p class="route-price">
+										от <span>11.20</span> BYN
+									</p>
+									<a
+										href="tickets.html"
+										class="route-button pulse-effect"
+										>Выбрать</a
+									>
+								</div>
+							</div>
+							<div class="route-bookmark"></div>
+						</div>
+					</div>
+				</div>
+				<div class="benefits-decoration">
+					<div class="benefits-circle"></div>
+					<div class="benefits-line"></div>
+				</div>
+			</section>
+
+			<section class="route-map">
+				<div class="container">
+					<h2 class="section-title">Карта маршрутов</h2>
+					<div class="map-container">
+						<div class="map-image">
+							<img
+								src="images/maprw.gif"
+								alt="Карта маршрутов"
+								class="route-map-img"
+								id="routeMapImage"
+							/>
+						</div>
+					</div>
+				</div>
+				<div class="testimonials-bg-pattern"></div>
+			</section>
+
+			<!-- Модальное окно для увеличения карты -->
+			<div id="mapModal" class="map-modal">
+				<span class="close-modal">&times;</span>
+				<div class="modal-content">
+					<img
+						src="images/maprw.gif"
+						alt="Карта маршрутов (увеличенная)"
+						id="modalMapImage"
+					/>
+					<div class="zoom-controls">
+						<button id="zoomIn">+</button>
+						<button id="zoomOut">-</button>
+						<button id="resetZoom">Сбросить</button>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<footer>
+			<div class="footer-top">
+				<div class="container">
+					<div class="newsletter">
+						<div class="newsletter-content">
+							<h3>Подпишитесь на новости и акции</h3>
+							<p>
+								Будьте в курсе специальных предложений и
+								обновлений расписания
+							</p>
+						</div>
+						<form class="newsletter-form">
+							<div class="form-group">
+								<input
+									type="email"
+									placeholder="Ваш email"
+									required=""
+								/>
+								<button type="submit" class="newsletter-button">
+									Подписаться
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="footer-main">
+				<div class="container">
+					<div class="footer-content">
+						<div class="footer-column brand-column">
+							<h3 class="footer-logo">
+								SpeedWagon<span>.by</span>
+							</h3>
+							<p>
+								Быстрые и комфортные железнодорожные перевозки
+								по всей Беларуси
+							</p>
+							<div class="social-icons">
+								<a href="#" class="social-icon">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<rect
+											x="2"
+											y="2"
+											width="20"
+											height="20"
+											rx="5"
+											ry="5"
+										></rect>
+										<path
+											d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+										></path>
+										<line
+											x1="17.5"
+											y1="6.5"
+											x2="17.51"
+											y2="6.5"
+										></line>
+									</svg>
+								</a>
+								<a href="#" class="social-icon">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path
+											d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+										></path>
+									</svg>
+								</a>
+								<a href="#" class="social-icon">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path
+											d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"
+										></path>
+										<polygon
+											points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"
+										></polygon>
+									</svg>
+								</a>
+								<a href="#" class="social-icon">
+									<svg
+										xmlns="http://www.w3.org/2000/svg"
+										width="20"
+										height="20"
+										viewBox="0 0 24 24"
+										fill="none"
+										stroke="currentColor"
+										stroke-width="2"
+										stroke-linecap="round"
+										stroke-linejoin="round"
+									>
+										<path
+											d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"
+										></path>
+									</svg>
+								</a>
+							</div>
+						</div>
+			</div>
+			<div class="footer-bottom">
+				<div class="container">
+					<p>© 2025 SpeedWagon.by - Все права защищены</p>
+					<div class="footer-links-bottom">
+						<a href="#">Политика конфиденциальности</a>
+						<a href="#">Условия использования</a>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</body>
+</html>

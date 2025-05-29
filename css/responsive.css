@@ -1,0 +1,53 @@
+@media(max-width: 1200px){.hero-container{flex-direction:column;text-align:center;padding-top:50px;padding-bottom:120px}.hero-content{max-width:100%}.hero p{max-width:none;margin:0 auto 30px}.cta-buttons{justify-content:center}.gradient-text{font-size:3rem}.hero-image{max-width:70%;margin:40px auto 0}.app-promo .container{flex-direction:column}.app-image-container{order:-1;margin-bottom:40px;max-width:450px;margin-left:auto;margin-right:auto}.app-image{max-width:100%}.app-info{max-width:100%;text-align:center}.app-info p{max-width:700px;margin:0 auto 30px}.app-features{max-width:600px;margin:0 auto 30px}.floating-badge{right:0}}@media(max-width: 992px){.header .container{padding:15px 20px}.menu{position:fixed;top:70px;right:-100%;width:80%;max-width:300px;background:var(--primary-dark);height:calc(100vh - 70px);flex-direction:column;padding:40px 20px;gap:20px;transition:var(--transition);box-shadow:var(--shadow);z-index:100}.menu.active{right:0}.mobile-menu{display:flex}.gradient-text{font-size:2.5rem}.floating-stats{position:relative;bottom:auto;margin-top:50px;flex-wrap:wrap;justify-content:center;display:none}.stat-item{min-width:120px}.routes-grid{grid-template-columns:repeat(auto-fill, minmax(280px, 1fr))}.benefits-grid{grid-template-columns:repeat(2, 1fr);gap:20px}.app-features{grid-template-columns:1fr;gap:15px}.app-image-container{max-width:400px}.testimonials-slider{overflow-x:hidden}.testimonial-card{padding:20px}.footer-content{grid-template-columns:repeat(2, 1fr);gap:40px}.newsletter{flex-direction:column;text-align:center}.newsletter-content{margin-bottom:20px}.newsletter-form{width:100%;max-width:100%}}@media(max-width: 768px){.gradient-text{font-size:2.2rem}.hero{min-height:auto;padding-bottom:120px}.section-title{font-size:2rem}.benefits-grid{grid-template-columns:1fr}.app-info h2{font-size:2rem}.app-info p{font-size:1rem}.app-buttons{flex-direction:column;gap:15px;align-items:center}.app-button{width:80%}.testimonials-slider{width:100%;margin:0 auto;overflow:visible;position:relative}.testimonial-card{padding:20px;height:auto;min-height:200px;display:flex;flex-direction:column;width:calc(100% - 30px);margin:0 auto}.testimonial-text{margin-bottom:15px;line-height:1.5;font-size:.95rem;flex:1}.testimonial-rating{margin-bottom:15px}.testimonial-dots{flex-wrap:wrap;justify-content:center;max-width:200px;margin:0 auto;gap:8px}.testimonial-controls{margin-top:20px;gap:15px}.testimonial-author{margin-top:auto}.footer-content{grid-template-columns:1fr}.footer-bottom .container{flex-direction:column;gap:15px;text-align:center}.footer-links-bottom{flex-direction:column;gap:10px;align-items:center}.newsletter-button{position:static;width:100%;margin-top:10px;padding:15px;border-radius:var(--border-radius)}.app-image-container{max-width:350px}.floating-badge{top:20px;right:0;padding:10px;font-size:.8rem}}@media(max-width: 576px){.hero{min-height:50vh}.hero-content .gradient-text{font-size:36px}.hero-image img{display:none}.gradient-text{font-size:1.8rem}.cta-buttons{flex-direction:column;gap:15px;width:100%;max-width:300px;margin:0 auto}.cta-primary,.cta-secondary{width:100%}.stat-item{min-width:110px;padding:15px}.stat-number{font-size:1.8rem}.stat-label{font-size:.85rem}.route-card{margin:0 auto;max-width:320px}.benefit-card{padding:20px}.benefit-card h3{font-size:1.2rem}.app-button{width:100%}.testimonial-control{width:36px;height:36px}.testimonial-control svg{width:18px;height:18px}.testimonials-container{padding:0 10px}.testimonial-card{padding:15px;border-radius:12px;box-shadow:0 5px 15px rgba(0,0,0,.1);width:100%;margin:0 auto;min-height:180px}.testimonial-text{font-size:.9rem;line-height:1.4}.testimonial-author-info h4{font-size:.95rem}.testimonial-author-info p{font-size:.8rem}.newsletter-content h3{font-size:1.2rem}.newsletter-content p{font-size:.9rem}.form-group input{padding:12px 15px}.app-image-container{max-width:300px}.testimonials-slider{width:100%;overflow:visible}}@media(max-width: 450px){.gradient-text{font-size:1.5rem}.hero{min-height:45vh}.contact-form-section,.tickets-search-section,.routes-categories,.contact-info-section{padding-top:40px}.hero:not(.index-page){padding-bottom:30px}.hero:not(.index-page) .hero-content{padding-bottom:30px}.app-image-container{max-width:280px}.floating-badge{top:10px;right:0;padding:8px;font-size:.7rem}}@media(max-width: 375px){.gradient-text{font-size:1.3rem}.hero p{font-size:.9rem}.hero-image{margin-top:20px}}/*# sourceMappingURL=responsive.css.map */
+
+/* Стили для мобильных устройств */
+
+/* Класс для определения мобильных устройств через JS */
+body.mobile-device .mobile-menu,
+body.mobile-device .testimonial-control,
+body.mobile-device .dot,
+body.mobile-device .route-button,
+body.mobile-device .select-button,
+body.mobile-device button {
+    cursor: pointer;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    touch-action: manipulation;
+}
+
+/* Увеличение области нажатия */
+body.mobile-device .mobile-menu {
+    padding: 10px;
+    margin: -10px;
+}
+
+body.mobile-device .testimonial-control {
+    padding: 25px;
+    margin: -15px;
+}
+
+body.mobile-device .dot {
+    padding: 15px;
+    margin: -10px;
+}
+
+/* Добавление активных состояний для тач-устройств */
+body.mobile-device .mobile-menu:active span,
+body.mobile-device .mobile-menu:focus span {
+    background-color: var(--secondary);
+}
+
+body.mobile-device .testimonial-control:active,
+body.mobile-device .testimonial-control:focus {
+    background-color: var(--primary-dark);
+    transform: scale(0.95);
+}
+
+body.mobile-device .dot:active,
+body.mobile-device .dot:focus {
+    transform: scale(1.2);
+}
+
+body.mobile-device a:active,
+body.mobile-device button:active {
+    opacity: 0.8;
+}
