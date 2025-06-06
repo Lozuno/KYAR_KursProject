@@ -14,9 +14,9 @@
 
 body {
 	font-family: "Montserrat", sans-serif;
-	color: var(--text);
+	color: $text;
 	line-height: 1.6;
-	background-color: var(--background);
+	background-color: $background;
 	overflow-x: hidden;
 }
 
@@ -31,7 +31,7 @@ body {
 a {
 	text-decoration: none;
 	color: inherit;
-	transition: var(--transition);
+	transition: $transition;
 }
 
 ul {
@@ -63,7 +63,7 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--primary);
+    background-color: $primary;
     z-index: 0;
   }
 
@@ -94,7 +94,7 @@ button {
   &-image {
     flex: 1;
     position: relative;
-    transition: var(--transition);
+    transition: $transition;
     transform-style: preserve-3d;
     transform: perspective(1000px);
 
@@ -105,8 +105,8 @@ button {
 
     img {
       width: 100%;
-      border-radius: var(--card-radius);
-      box-shadow: var(--shadow);
+      border-radius: $card-radius;
+      box-shadow: $shadow;
       transform: translateZ(10px);
     }
 
@@ -116,8 +116,8 @@ button {
       right: -20px;
       width: 70%;
       height: 70%;
-      background-color: var(--accent);
-      border-radius: var(--card-radius);
+      background-color: $accent;
+      border-radius: $card-radius;
       z-index: -1;
     }
   }
@@ -150,7 +150,7 @@ button {
 }
 
 .gradient-text {
-	background-image: var(--gradient-secondary);
+	background-image: $gradient-secondary;
 	background-size: 100%;
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -170,20 +170,20 @@ button {
 	align-items: center;
 	justify-content: center;
 	padding: 12px 25px;
-	border-radius: var(--border-radius);
+	border-radius: $border-radius;
 	font-weight: 600;
-	transition: var(--transition);
+	transition: $transition;
 	position: relative;
 	overflow: hidden;
 }
 
 .cta-primary {
-	background-color: var(--secondary);
+	background-color: $secondary;
 	color: white;
 	box-shadow: 0 5px 15px rgba(255, 51, 102, 0.3);
 
 	&:hover {
-		background-color: var(--secondary-light);
+		background-color: $secondary-light;
 		transform: translateY(-2px);
 	}
 }
@@ -218,7 +218,7 @@ button {
 }
 
 .shape-divider path {
-	fill: var(--background);
+	fill: $background;
 }
 
 .floating-stats {
@@ -235,14 +235,14 @@ button {
 
 .stat-item {
 	background-color: rgba(255, 255, 255, 1);
-	border-radius: var(--card-radius);
+	border-radius: $card-radius;
 	padding: 20px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	min-width: 150px;
-	box-shadow: var(--shadow);
-	transition: var(--transition);
+	box-shadow: $shadow;
+	transition: $transition;
 	animation: float 5s ease-in-out infinite;
 }
 
@@ -278,14 +278,14 @@ button {
 .stat-number {
 	font-size: 2.2rem;
 	font-weight: 800;
-	color: var(--primary);
+	color: $primary;
 	margin-bottom: 5px;
 }
 
 .stat-label {
 	font-size: 0.95rem;
 	font-weight: 500;
-	color: var(--text-light);
+	color: $text-light;
 	text-align: center;
 }
 
@@ -312,7 +312,7 @@ button {
 	transform: translateX(-50%);
 	width: 80px;
 	height: 4px;
-	background-image: var(--gradient-secondary);
+	background-image: $gradient-secondary;
 	border-radius: 4px;
 }
 
@@ -329,12 +329,12 @@ button {
 
 .route-card {
 	background-color: white;
-	border-radius: var(--card-radius);
+	border-radius: $card-radius;
 	overflow: hidden;
-	box-shadow: var(--shadow);
+	box-shadow: $shadow;
 	position: relative;
 	z-index: 2;
-	transition: var(--transition);
+	transition: $transition;
 }
 
 .route-card:hover {
@@ -348,7 +348,7 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: var(--gradient-primary);
+	background: $gradient-primary;
 	overflow: hidden;
 }
 
@@ -416,7 +416,7 @@ button {
 	align-items: flex-end;
 	gap: 15px;
 	background-color: white;
-	border-radius: 0 0 var(--card-radius) var(--card-radius);
+	border-radius: 0 0 $card-radius $card-radius;
 	box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
 }
 
@@ -428,7 +428,7 @@ button {
 	font-size: 1.4rem;
 	margin-bottom: 10px;
 	font-weight: 700;
-	color: var(--primary-dark);
+	color: $primary-dark;
 }
 
 .route-details-badge {
@@ -439,7 +439,7 @@ button {
 	border-radius: 20px;
 	font-size: 0.85rem;
 	margin-bottom: 5px;
-	color: var(--text);
+	color: $text;
 }
 
 .route-dash {
@@ -459,20 +459,20 @@ button {
 .route-price {
 	font-size: 0.9rem;
 	margin-bottom: 10px;
-	color: var(--text);
+	color: $text;
 }
 
 .route-price span {
 	font-size: 1.2rem;
 	font-weight: 700;
-	color: var(--primary);
+	color: $primary;
 }
 
 .route-button {
-	background-color: var(--primary);
+	background-color: $primary;
 	color: white;
 	padding: 8px 20px;
-	border-radius: var(--border-radius);
+	border-radius: $border-radius;
 	font-weight: 600;
 	position: relative;
 	overflow: hidden;
@@ -503,7 +503,7 @@ button {
 }
 
 .route-button:hover {
-	background-color: var(--primary-dark);
+	background-color: $primary-dark;
 }
 
 .route-bookmark {
@@ -515,7 +515,7 @@ button {
 	background-color: white;
 	border-radius: 0 0 5px 5px;
 	cursor: pointer;
-	transition: var(--transition);
+	transition: $transition;
 	z-index: 3;
 }
 
@@ -525,7 +525,7 @@ button {
 }
 
 .route-bookmark.active {
-	background-color: var(--secondary);
+	background-color: $secondary;
 }
 
 .see-all {
@@ -539,16 +539,16 @@ button {
 	align-items: center;
 	gap: 10px;
 	font-weight: 600;
-	color: var(--primary);
+	color: $primary;
 	padding: 10px 20px;
-	border-radius: var(--border-radius);
+	border-radius: $border-radius;
 	background-color: rgba(74, 17, 168, 0.05);
-	transition: var(--transition);
+	transition: $transition;
 }
 
 .see-all-link:hover {
 	background-color: rgba(74, 17, 168, 0.1);
-	color: var(--primary-dark);
+	color: $primary-dark;
 }
 
 .see-all-link svg {
@@ -565,10 +565,10 @@ button {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: var(--background);
+	background-color: $background;
 	z-index: -1;
 	opacity: 0.7;
-	background-image: radial-gradient(var(--accent-light) 1px, transparent 1px);
+	background-image: radial-gradient($accent-light 1px, transparent 1px);
 	background-size: 20px 20px;
 }
 
@@ -592,7 +592,7 @@ button {
 
 .benefits h2 {
 	margin-bottom: 60px;
-	color: var(--dark);
+	color: $dark;
 }
 
 .benefits-grid {
@@ -603,10 +603,10 @@ button {
 
 .benefit-card {
 	background-color: white;
-	border-radius: var(--card-radius);
+	border-radius: $card-radius;
 	padding: 30px;
-	box-shadow: var(--shadow);
-	transition: var(--transition);
+	box-shadow: $shadow;
+	transition: $transition;
 	position: relative;
 	overflow: hidden;
 }
@@ -624,13 +624,13 @@ button {
 	align-items: center;
 	justify-content: center;
 	margin-bottom: 20px;
-	color: var(--primary);
+	color: $primary;
 	font-size: 1.5rem;
-	transition: var(--transition);
+	transition: $transition;
 }
 
 .benefit-card:hover .benefit-icon {
-	background-color: var(--primary);
+	background-color: $primary;
 	color: white;
 }
 
@@ -638,11 +638,11 @@ button {
 	font-size: 1.3rem;
 	font-weight: 700;
 	margin-bottom: 15px;
-	color: var(--dark);
+	color: $dark;
 }
 
 .benefit-card p {
-	color: var(--text-light);
+	color: $text-light;
 	line-height: 1.7;
 }
 
@@ -652,10 +652,10 @@ button {
 	right: -40px;
 	width: 150px;
 	height: 150px;
-	background-image: var(--gradient-accent);
+	background-image: $gradient-accent;
 	border-radius: 50%;
 	opacity: 0.1;
-	transition: var(--transition);
+	transition: $transition;
 	animation: moveBgPattern 10s infinite alternate;
 }
 
@@ -730,18 +730,18 @@ button {
 	font-size: 2.5rem;
 	font-weight: 800;
 	margin-bottom: 20px;
-	color: var(--dark);
+	color: $dark;
 }
 
 .app-info h2 span {
-	background: var(--gradient-secondary);
+	background: $gradient-secondary;
 	background-clip: text;
 	-webkit-background-clip: text;
 	color: transparent;
 }
 
 .app-info p {
-	color: var(--text-light);
+	color: $text-light;
 	margin-bottom: 30px;
 	line-height: 1.7;
 	font-size: 1.1rem;
@@ -761,12 +761,12 @@ button {
 }
 
 .app-feature svg {
-	color: var(--primary);
+	color: $primary;
 }
 
 .app-feature span {
 	font-weight: 600;
-	color: var(--text);
+	color: $text;
 }
 
 .app-buttons {
@@ -778,16 +778,16 @@ button {
 	display: flex;
 	align-items: center;
 	gap: 10px;
-	background-color: var(--dark);
+	background-color: $dark;
 	color: white;
 	padding: 12px 25px;
-	border-radius: var(--border-radius);
+	border-radius: $border-radius;
 	font-weight: 600;
-	transition: var(--transition);
+	transition: $transition;
 }
 
 .app-button:hover {
-	background-color: var(--primary);
+	background-color: $primary;
 	transform: translateY(-2px);
 }
 
@@ -808,7 +808,7 @@ button {
 	transform: translate(-50%, -50%);
 	width: 80%;
 	height: 80%;
-	background-color: var(--primary);
+	background-color: $primary;
 	border-radius: 50%;
 	filter: blur(50px);
 	opacity: 0.3;
@@ -819,9 +819,9 @@ button {
 	width: 100%;
 	height: auto;
 	max-width: 100%;
-	border-radius: var(--card-radius);
-	box-shadow: var(--shadow);
-	transition: var(--transition);
+	border-radius: $card-radius;
+	box-shadow: $shadow;
+	transition: $transition;
 	transform: perspective(1000px) rotateY(-5deg);
 	object-fit: contain;
 }
@@ -834,10 +834,10 @@ button {
 	position: absolute;
 	top: 40px;
 	right: -20px;
-	background-color: var(--secondary);
+	background-color: $secondary;
 	color: white;
 	padding: 15px;
-	border-radius: var(--border-radius);
+	border-radius: $border-radius;
 	font-weight: 700;
 	font-size: 0.9rem;
 	line-height: 1.4;
@@ -876,7 +876,7 @@ button {
 
 .testimonials h2 {
 	margin-bottom: 60px;
-	color: var(--dark);
+	color: $dark;
 }
 
 .testimonials-slider {
@@ -888,10 +888,10 @@ button {
 .testimonial-card {
 	flex: 0 0 100%;
 	background-color: white;
-	border-radius: var(--card-radius);
+	border-radius: $card-radius;
 	padding: 30px;
-	box-shadow: var(--shadow);
-	transition: var(--transition);
+	box-shadow: $shadow;
+	transition: $transition;
 	flex: 0 0 100%;
 	margin: 0 15px;
 	box-sizing: border-box;
@@ -905,14 +905,14 @@ button {
 	display: flex;
 	gap: 5px;
 	margin-bottom: 20px;
-	color: var(--secondary);
+	color: $secondary;
 }
 
 .testimonial-text {
 	font-size: 1.1rem;
 	line-height: 1.7;
 	margin-bottom: 20px;
-	color: var(--text);
+	color: $text;
 }
 
 .testimonial-author {
@@ -922,12 +922,12 @@ button {
 
 .testimonial-name {
 	font-weight: 700;
-	color: var(--dark);
+	color: $dark;
 }
 
 .testimonial-route {
 	font-size: 0.9rem;
-	color: var(--text-light);
+	color: $text-light;
 }
 
 .testimonial-controls {
@@ -945,13 +945,13 @@ button {
 	align-items: center;
 	justify-content: center;
 	background-color: white;
-	color: var(--primary);
-	box-shadow: var(--shadow);
-	transition: var(--transition);
+	color: $primary;
+	box-shadow: $shadow;
+	transition: $transition;
 }
 
 .testimonial-control:hover {
-	background-color: var(--primary);
+	background-color: $primary;
 	color: white;
 }
 
@@ -966,11 +966,11 @@ button {
 	border-radius: 50%;
 	background-color: rgba(74, 17, 168, 0.2);
 	cursor: pointer;
-	transition: var(--transition);
+	transition: $transition;
 }
 
 .dot.active {
-	background-color: var(--primary);
+	background-color: $primary;
 }
 
 .testimonials-bg-pattern {
@@ -979,7 +979,7 @@ button {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: radial-gradient(var(--primary-dark) 1px, transparent 2px);
+	background-image: radial-gradient($primary-dark 1px, transparent 2px);
 	background-size: 50px 50px;
 	opacity: 0.05;
 	z-index: -1;

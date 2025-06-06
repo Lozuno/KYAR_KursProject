@@ -1,23 +1,33 @@
-:root {
-	--primary: #4a11a8;
-	--primary-dark: #35097a;
-	--secondary: #ff3366;
-	--secondary-light: #ff6b96;
-	--accent: #1ecbe1;
-	--accent-light: #8de9f7;
+// Colors
+$primary: #4a11a8;
+$primary-dark: #35097a;
+$primary-light: #7b31e4;
+$secondary: #ff3366;
+$secondary-light: #ff6b96;
+$accent: #1ecbe1;
+$accent-light: #8de9f7;
 
-	--light: #f8f9fd;
-	--dark: #191d3a;
-	--text: #292f4c;
-	--text-light: #6e7299;
-	--background: #f3f5ff;
+$light: #f8f9fd;
+$dark: #191d3a;
+$text: #292f4c;
+$text-light: #6e7299;
+$background: #f3f5ff;
+$background-light: #f9faff;
+$card-bg: #ffffff;
+$section-bg: #f5f7ff;
+$heading: #1a1f36;
 
-	--shadow: 0 10px 30px rgba(74, 17, 168, 0.1);
-	--border-radius: 12px;
-	--card-radius: 16px;
-	--transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+// Effects
+$shadow: 0 10px 30px rgba($primary, 0.1);
+$shadow-hover: 0 15px 40px rgba($primary, 0.15);
+$border-radius: 12px;
+$card-radius: 16px;
+$transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 
-	--gradient-primary: linear-gradient(135deg, #4a11a8 0%, #7b31e4 100%);
-	--gradient-secondary: linear-gradient(135deg, #ff3366 0%, #ff7f9c 100%);
-	--gradient-accent: linear-gradient(135deg, #1ecbe1 0%, #8de9f7 100%);
-}
+// Gradients
+$gradient-primary: linear-gradient(135deg, $primary 0%, $primary-light 100%);
+$gradient-secondary: linear-gradient(135deg, $secondary 0%, #ff7f9c 100%);
+$gradient-accent: linear-gradient(135deg, $accent 0%, $accent-light 100%);
+
+// Transparencies
+$accent-transparent: rgba($accent, 0.1);

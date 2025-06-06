@@ -1,8 +1,8 @@
+@import "./_variables";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
 @import "footer";
 @import "header";
 @import "loading";
-@import "variables";
 
 * {
 	margin: 0;
@@ -12,9 +12,9 @@
 
 body {
 	font-family: "Montserrat", sans-serif;
-	color: var(--text);
+	color: $text;
 	line-height: 1.6;
-	background-color: var(--background);
+	background-color: $background;
 	overflow-x: hidden;
 }
 
@@ -29,7 +29,7 @@ body {
 a {
 	text-decoration: none;
 	color: inherit;
-	transition: var(--transition);
+	transition: $transition;
 }
 
 ul {
@@ -59,7 +59,7 @@ button {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: var(--primary);
+	background-color: $primary;
 	z-index: 0;
 }
 
@@ -99,10 +99,11 @@ button {
 .hero-content {
 	flex: 1;
 	max-width: 600px;
+	background-color: $primary;
 }
 
 .gradient-text {
-	background-image: var(--gradient-secondary);
+	background-image: $gradient-secondary;
 	background-size: 100%;
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -134,21 +135,21 @@ button {
 	align-items: center;
 	justify-content: center;
 	padding: 12px 25px;
-	border-radius: var(--border-radius);
+	border-radius: $border-radius;
 	font-weight: 600;
-	transition: var(--transition);
+	transition: $transition;
 	position: relative;
 	overflow: hidden;
 }
 
 .cta-primary {
-	background-color: var(--secondary);
+	background-color: $secondary;
 	color: white;
 	box-shadow: 0 5px 15px rgba(255, 51, 102, 0.3);
 }
 
 .cta-primary:hover {
-	background-color: var(--secondary-light);
+	background-color: $secondary-light;
 	transform: translateY(-2px);
 }
 
@@ -167,7 +168,7 @@ button {
 .hero-image {
 	flex: 1;
 	position: relative;
-	transition: var(--transition);
+	transition: $transition;
 	transform-style: preserve-3d;
 	transform: perspective(1000px);
 }
@@ -178,8 +179,8 @@ button {
 
 .hero-image img {
 	width: 100%;
-	border-radius: var(--card-radius);
-	box-shadow: var(--shadow);
+	border-radius: $card-radius;
+	box-shadow: $shadow;
 	transform: translateZ(10px);
 }
 
@@ -189,8 +190,8 @@ button {
 	right: -20px;
 	width: 70%;
 	height: 70%;
-	background-color: var(--accent);
-	border-radius: var(--card-radius);
+	background-color: $accent;
+	border-radius: $card-radius;
 	z-index: -1;
 }
 
@@ -212,7 +213,7 @@ button {
 }
 
 .shape-divider path {
-	fill: var(--background);
+	fill: $background;
 }
 
 .section-title {
@@ -233,7 +234,7 @@ button {
 	transform: translateX(-50%);
 	width: 80px;
 	height: 4px;
-	background-image: var(--gradient-secondary);
+	background-image: $gradient-secondary;
 	border-radius: 4px;
 }
 
@@ -253,18 +254,18 @@ button {
 	width: 100%;
 	padding: 15px 20px;
 	padding-left: 50px;
-	border-radius: var(--card-radius);
+	border-radius: $card-radius;
 	border: 1px solid rgba(255, 255, 255, 0.1);
-	background-color: var(--card-bg);
-	color: var(--text);
+	background-color: $card-bg;
+	color: $text;
 	font-size: 1rem;
-	transition: var(--transition);
+	transition: $transition;
 }
 
 #route-search:focus {
 	outline: none;
-	border-color: var(--primary);
-	box-shadow: 0 0 0 3px rgba(var(--primary-rgb), 0.2);
+	border-color: $primary;
+	box-shadow: 0 0 0 3px rgba($primary, 0.2);
 }
 
 .search-container::before {
@@ -282,15 +283,15 @@ button {
 }
 
 .filter-form {
-	background-color: var(--card-bg);
-	border-radius: var(--card-radius);
+	background-color: $card-bg;
+	border-radius: $card-radius;
 	padding: 30px;
 	margin-bottom: 40px;
 	display: flex;
 	flex-wrap: wrap;
 	gap: 20px;
 	align-items: flex-end;
-	box-shadow: var(--shadow);
+	box-shadow: $shadow;
 	border: 1px solid rgba(255, 255, 255, 0.05);
 	max-width: 800px;
 	margin-left: auto;
@@ -306,16 +307,16 @@ button {
 	display: block;
 	margin-bottom: 8px;
 	font-weight: 500;
-	color: var(--heading);
+	color: $heading;
 }
 
 .filter-group select {
 	width: 100%;
 	padding: 12px 15px;
-	border-radius: var(--border-radius);
+	border-radius: $border-radius;
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	background-color: rgba(255, 255, 255, 0.05);
-	color: var(--text);
+	color: $text;
 	appearance: none;
 	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23808080' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
 	background-repeat: no-repeat;
@@ -323,22 +324,22 @@ button {
 	padding-right: 35px;
 	font-family: inherit;
 	cursor: pointer;
-	transition: var(--transition);
+	transition: $transition;
 }
 
 .filter-group select:focus {
 	outline: none;
-	border-color: var(--primary);
-	box-shadow: 0 0 0 2px rgba(var(--primary-rgb), 0.2);
+	border-color: $primary;
+	box-shadow: 0 0 0 2px rgba($primary, 0.2);
 }
 
 .filter-button {
-	background-image: var(--gradient-primary);
+	background-image: $gradient-primary;
 	color: white;
 	padding: 12px 25px;
-	border-radius: var(--border-radius);
+	border-radius: $border-radius;
 	font-weight: 600;
-	transition: var(--transition);
+	transition: $transition;
 	flex: 1 1 auto;
 	text-align: center;
 }
@@ -355,21 +356,22 @@ button {
 }
 
 .route-card {
-	background-color: var(--card-bg);
-	border-radius: var(--card-radius);
+	background-color: $card-bg;
+	border-radius: $card-radius;
 	overflow: hidden;
-	box-shadow: var(--shadow);
+	box-shadow: $shadow;
 	position: relative;
-	transition: var(--transition);
+	transition: $transition;
 	border: 1px solid rgba(255, 255, 255, 0.05);
 	min-height: 250px;
 	display: flex;
 	flex-direction: column;
+	color: $text;
 }
 
 .route-card:hover {
-	transform: translateY(-5px) !important;
-	box-shadow: var(--shadow-hover);
+	border-color: $primary;
+	box-shadow: 0 0 0 3px rgba($primary, 0.2);
 }
 
 .route-image {
@@ -378,7 +380,7 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background: var(--gradient-primary);
+	background: $gradient-primary;
 	z-index: 0;
 }
 
@@ -441,16 +443,16 @@ button {
 	justify-content: space-between;
 	align-items: flex-end;
 	gap: 15px;
-	background-color: white;
-	border-radius: 0 0 var(--card-radius) var(--card-radius);
-	box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+	background-color: $card-bg;
+	border-radius: 0 0 $card-radius $card-radius;
+	box-shadow: $shadow;
 }
 
 .route-cities h3 {
 	font-size: 1.4rem;
 	margin-bottom: 10px;
 	font-weight: 700;
-	color: var(--primary-dark);
+	color: $primary-dark;
 }
 
 .route-details-badge {
@@ -461,7 +463,7 @@ button {
 	border-radius: 20px;
 	font-size: 0.85rem;
 	margin-bottom: 5px;
-	color: var(--text);
+	color: $text;
 }
 
 .route-dash {
@@ -481,27 +483,27 @@ button {
 .route-price {
 	font-size: 0.9rem;
 	margin-bottom: 10px;
-	color: var(--text);
+	color: $text;
 }
 
 .route-price span {
 	font-size: 1.2rem;
 	font-weight: 700;
-	color: var(--primary);
+	color: $primary;
 }
 
 .route-button {
-	background-color: var(--secondary);
+	background-color: $secondary;
 	color: white;
 	padding: 8px 15px;
-	border-radius: var(--border-radius);
+	border-radius: $border-radius;
 	font-weight: 600;
 	font-size: 0.9rem;
-	transition: var(--transition);
+	transition: $transition;
 }
 
 .route-button:hover {
-	background-color: var(--secondary-light);
+	background-color: $secondary-light;
 	transform: translateY(-2px);
 }
 
@@ -514,7 +516,7 @@ button {
 	background-color: white;
 	border-radius: 0 0 5px 5px;
 	cursor: pointer;
-	transition: var(--transition);
+	transition: $transition;
 	z-index: 3;
 }
 
@@ -524,28 +526,28 @@ button {
 }
 
 .route-bookmark.active {
-	background-color: var(--secondary);
+	background-color: $secondary;
 }
 
 .route-map {
 	padding: 80px 0;
 	position: relative;
 	overflow: hidden;
-	background-color: var(--section-bg);
+	background-color: $section-bg;
 	
 	.map-container {
 		max-width: 100%;
-		border-radius: var(--card-radius);
+		border-radius: $card-radius;
 		overflow: hidden;
 		box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 	}
 	
 	.map-image {
 		width: 100%;
-		background-color: var(--background-light);
-		border-radius: var(--card-radius);
+		background-color: $background-light;
+		border-radius: $card-radius;
 		cursor: pointer;
-		transition: var(--transition);
+		transition: $transition;
 		
 		&:hover {
 			transform: translateY(-5px);
@@ -557,7 +559,7 @@ button {
 		width: 100%;
 		height: auto;
 		object-fit: contain;
-		border-radius: var(--card-radius);
+		border-radius: $card-radius;
 		display: block;
 	}
 }
@@ -566,10 +568,10 @@ button {
 	position: absolute;
 	bottom: 20px;
 	left: 20px;
-	background-color: rgba(var(--card-bg-rgb), 0.9);
+	background-color: rgba($card-bg, 0.9);
 	backdrop-filter: blur(10px);
 	padding: 15px 20px;
-	border-radius: var(--border-radius);
+	border-radius: $border-radius;
 	border: 1px solid rgba(255, 255, 255, 0.1);
 	z-index: 1;
 }
@@ -592,20 +594,20 @@ button {
 }
 
 .legend-color.primary {
-	background-color: var(--primary);
+	background-color: $primary;
 }
 
 .legend-color.secondary {
-	background-color: var(--secondary);
+	background-color: $secondary;
 }
 
 .legend-color.station {
-	background-color: var(--accent);
+	background-color: $accent;
 }
 
 .legend-text {
 	font-size: 0.9rem;
-	color: var(--text);
+	color: $text;
 }
 
 .benefits-decoration {
@@ -674,7 +676,7 @@ button {
 		z-index: 1010;
 		
 		&:hover {
-			color: var(--secondary);
+			color: $secondary;
 		}
 	}
 	
@@ -708,7 +710,7 @@ button {
 		gap: 10px;
 		
 		button {
-			background-color: var(--primary);
+			background-color: $primary;
 			color: white;
 			width: 40px;
 			height: 40px;
@@ -718,10 +720,10 @@ button {
 			align-items: center;
 			justify-content: center;
 			box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-			transition: var(--transition);
+			transition: $transition;
 			
 			&:hover {
-				background-color: var(--secondary);
+				background-color: $secondary;
 				transform: translateY(-2px);
 			}
 			

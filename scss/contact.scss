@@ -13,9 +13,9 @@
 
 body {
 	font-family: "Montserrat", sans-serif;
-	color: var(--text);
+	color: $text;
 	line-height: 1.6;
-	background-color: var(--background);
+	background-color: $background;
 	overflow-x: hidden;
 	width: 100%;
 	min-width: 320px;
@@ -38,7 +38,7 @@ main {
 a {
 	text-decoration: none;
 	color: inherit;
-	transition: var(--transition);
+	transition: $transition;
 }
 
 ul {
@@ -70,13 +70,13 @@ button {
 		transform: translateX(-50%);
 		width: 80px;
 		height: 4px;
-		background-image: var(--gradient-secondary);
+		background-image: $gradient-secondary;
 		border-radius: 4px;
 	}
 }
 
 .gradient-text {
-	background-image: var(--gradient-secondary);
+	background-image: $gradient-secondary;
 	background-size: 100%;
 	background-clip: text;
 	-webkit-background-clip: text;
@@ -119,7 +119,7 @@ button {
 
 	&-bg {
 		@include overlay;
-		background-color: var(--primary);
+		background-color: $primary;
 		z-index: 0;
 	}
 
@@ -180,7 +180,7 @@ button {
 	}
 
 	path {
-		fill: var(--background);
+		fill: $background;
 	}
 }
 
@@ -209,13 +209,13 @@ button {
 			background-color: rgba(74, 17, 168, 0.1);
 			@include flex(row, center, center);
 			margin-bottom: 20px;
-			color: var(--primary);
+			color: $primary;
 			font-size: 1.5rem;
-			transition: var(--transition);
+			transition: $transition;
 		}
 
 		&:hover .benefit-icon {
-			background-color: var(--primary);
+			background-color: $primary;
 			color: white;
 		}
 
@@ -223,11 +223,11 @@ button {
 			font-size: 1.3rem;
 			font-weight: 700;
 			margin-bottom: 15px;
-			color: var(--dark);
+			color: $dark;
 		}
 
 		p {
-			color: var(--text-light);
+			color: $text-light;
 			line-height: 1.7;
 		}
 
@@ -237,10 +237,10 @@ button {
 			right: -40px;
 			width: 150px;
 			height: 150px;
-			background-image: var(--gradient-accent);
+			background-image: $gradient-accent;
 			border-radius: 50%;
 			opacity: 0.1;
-			transition: var(--transition);
+			transition: $transition;
 			animation: moveBgPattern 10s infinite alternate;
 		}
 
@@ -252,10 +252,10 @@ button {
 
 .section-bg-accent {
 	@include overlay;
-	background-color: var(--background);
+	background-color: $background;
 	z-index: -1;
 	opacity: 0.7;
-	background-image: radial-gradient(var(--accent-light) 1px, transparent 1px);
+	background-image: radial-gradient($accent-light 1px, transparent 1px);
 	background-size: 20px 20px;
 }
 
@@ -276,9 +276,9 @@ button {
 		max-width: 800px;
 		margin: 0 auto;
 		background-color: white;
-		border-radius: var(--card-radius);
+		border-radius: $card-radius;
 		padding: 40px;
-		box-shadow: var(--shadow);
+		box-shadow: $shadow;
 	}
 
 	.form-row {
@@ -311,14 +311,14 @@ button {
 			width: 100%;
 			padding: 12px 15px;
 			border: 1px solid rgba(0, 0, 0, 0.1);
-			border-radius: var(--border-radius);
+			border-radius: $border-radius;
 			font-family: inherit;
 			font-size: 1rem;
-			transition: var(--transition);
-			color: var(--dark);
+			transition: $transition;
+			color: $dark;
 
 			&:focus {
-				border-color: var(--primary);
+				border-color: $primary;
 				outline: none;
 				box-shadow: 0 0 0 3px rgba(74, 17, 168, 0.1);
 			}
@@ -353,14 +353,14 @@ button {
 	}
 
 	.submit-button {
-		@include button(var(--primary), white);
+		@include button($primary, white);
 		width: 100%;
 		padding: 15px;
 		font-size: 1.1rem;
 		margin-top: 20px;
 
 		&:hover {
-			background-color: var(--primary-dark);
+			background-color: $primary-dark;
 		}
 	}
 }
@@ -439,16 +439,16 @@ button {
 
 	.faq-item {
 		background-color: white;
-		border-radius: var(--border-radius);
+		border-radius: $border-radius;
 		margin-bottom: 15px;
-		box-shadow: var(--shadow);
+		box-shadow: $shadow;
 		overflow: hidden;
 
 		.faq-question {
 			@include flex(row, space-between, center);
 			padding: 20px 25px;
 			cursor: pointer;
-			transition: var(--transition);
+			transition: $transition;
 
 			h3 {
 				font-size: 1.1rem;
@@ -464,8 +464,8 @@ button {
 				&::after {
 					content: "";
 					position: absolute;
-					background-color: var(--primary);
-					transition: var(--transition);
+					background-color: $primary;
+					transition: $transition;
 				}
 
 				&::before {
@@ -493,7 +493,7 @@ button {
 			transition: max-height 0.3s ease, padding 0.3s ease;
 
 			p {
-				color: var(--text-light);
+				color: $text-light;
 				padding-bottom: 20px;
 			}
 		}
@@ -518,7 +518,7 @@ button {
 
 .testimonials-bg-pattern {
 	@include overlay;
-	background-image: radial-gradient(var(--primary-dark) 1px, transparent 2px);
+	background-image: radial-gradient($primary-dark 1px, transparent 2px);
 	background-size: 50px 50px;
 	opacity: 0.05;
 	z-index: -1;
@@ -531,9 +531,9 @@ button {
 	.map-container {
 		max-width: 1000px;
 		margin: 0 auto;
-		border-radius: var(--card-radius);
+		border-radius: $card-radius;
 		overflow: hidden;
-		box-shadow: var(--shadow);
+		box-shadow: $shadow;
 	}
 }
 

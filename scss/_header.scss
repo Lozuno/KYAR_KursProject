@@ -5,7 +5,7 @@ header {
 	left: 0;
 	width: 100%;
 	z-index: 1000;
-	transition: var(--transition);
+	transition: $transition;
 }
 
 .glass-nav {
@@ -17,7 +17,7 @@ header {
 	background-color: rgba(30, 0, 90, 0.3);
 	backdrop-filter: blur(10px);
 	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-	transition: var(--transition);
+	transition: $transition;
 
 	.container {
 		display: flex;
@@ -37,7 +37,7 @@ header {
 		margin: 0;
 
 		span {
-			color: var(--secondary);
+			color: $secondary;
 		}
 	}
 }
@@ -67,7 +67,7 @@ nav {
 			width: 0;
 			height: 2px;
 			background-color: white;
-			transition: var(--transition);
+			transition: $transition;
 		}
 
 		&:hover::after,
@@ -76,10 +76,10 @@ nav {
 		}
 
 		&.active {
-			color: var(--secondary);
+			color: $secondary;
 
 			&::after {
-				background-color: var(--secondary);
+				background-color: $secondary;
 			}
 		}
 	}
